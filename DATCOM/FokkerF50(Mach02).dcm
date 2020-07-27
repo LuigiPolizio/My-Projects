@@ -1,0 +1,99 @@
+*
+*  Fokker F50
+*
+************************
+*   List of Command Card
+************************
+DIM FT
+DAMP
+DERIV RAD
+PART
+
+
+**********************  
+*  Flight Conditions *
+**********************
+* $FLTCON WT=115000.0$    Removed for compatibility with Matlab
+
+ $FLTCON WT=43900.0,NMACH=1.0, MACH(1)=0.2,
+         NALT=1.,ALT(1)=25000.,
+         NALPHA=20.0, 
+         ALSCHD(1)= -20.0,-18.0, -16.0, -8.0, -6.0, -4.0, 0.0, 2.0, 4.0, 8.0,
+             10.0, 12.0, 14.0, 16.0, 18.0, 20.0, 22.0, 24.0, 26.0, 28.0,
+         GAMMA=0., LOOP=2.0,
+         RNNUB(1)=620000.$
+
+
+*************************  
+*  Reference Parameters *   
+*************************
+ $OPTINS BLREF=95.15,SREF=790.2,CBARR=8.91$
+
+
+**************************************
+* Group II     Synthesis Parameters  * 
+**************************************
+ $SYNTHS XW=30.94,ZW=4.7,ALIW=0.0,XCG=33.5,ZCG=0.0,
+    XH=68.0,ZH=4.25,
+    XV=66.6,ZV=4.25,
+    VERTUP=.TRUE.$
+
+
+**********************************  
+*  Body Configuration Parameters * 
+**********************************
+ $BODY NX=16.,
+    BNOSE=2.,BTAIL=2.,BLA=14.83,
+    X(1)=0.,0.62,1.87,3.1,4.4,5.6,6.45,8.16,9.9,11.6,13.3,57.0,64.5,67.0,68.5,82.83,
+    ZU(1)=0.,0.96,1.66,2.15,2.54,2.9,3.4,4.26,4.9,5.3,5.54,5.54,5.54,6.6,6.8,6.8,
+    ZL(1)=0.,-1.,-1.7,-2.2,-2.5,-2.8,-2.9,-3.,-3.2,-3.3,-3.4,-3.4,-2.,-1.4,-1.,3.0,
+* Commented out by WAG, as DATCOM complained it was too much data.
+*    R(1)=.34,1.38,2.76,3.45,4.14,5.18,6.21,6.21,
+*       5.87,5.52,4.14,2.76,.69,0.0,
+    S(1)=0.,2.9,8.7,14.5,20.3,26.1,31.7,42.,51.2,58.3,63.2,63.2,45.7,49.9,47.1,10.8$
+
+
+**********************************
+*         Wing planform variables CHRDBP=12.18,SSPNOP=31.1,SAVSO=4.4,
+**********************************
+ $WGPLNF CHRDR=12.18,CHRDTP=4.43, 
+	SSPN=47.575,SSPNE=47.575,CHSTAT=0.0,TWISTA=0.,TYPE=1.,
+    SAVSI=4.4,DHDADI=2.5$
+	
+NACA-W-4-0012-25
+*********************************
+*    Jet Power Effects parameters
+*********************************
+
+ $PROPWR AIETLP=0.0, PHALOC=24.37, YP=11.37, CROT=.FALSE.,
+         PHVLOC=4.7, PRPRAD=6., BAPR75=18.0,ENGFCT=70.0, 
+         NOPBPE=6.0, NENGSP=2.0,  THSTCP=0.0$
+
+
+******************************************
+*         Vertical Tail planform variables
+******************************************
+ $VTPLNF CHRDR=15.5,CHRDTP=5.5,SAVSI=-15.,
+    SSPN=18.6,SSPNOP=0.,SSPNE=14.84,CHSTAT=1.,TWISTA=0.,TYPE=1.$
+
+NACA-V-4-0012-25
+*********************************************
+*         Horizontal Tail planform variables   pg 37-38
+*********************************************
+ $HTPLNF CHRDR=10.,CHRDTP=3.1,
+    SSPN=16.,SSPNE=15.,CHSTAT=1.,TWISTA=0.,TYPE=1.,
+    SAVSI=-15.,DHDADI=9.$
+
+******************************************
+*    Symetrical Flap Deflection parameters
+******************************************
+ $SYMFLP FTYPE=1.,NDELTA=7.,DELTA(1)=-15.,-10.,-5.,0.,
+    5.,10.,15.,SPANFI=1.,SPANFO=16.,CHRDFI=2.9,
+    CHRDFO=1.44,NTYPE=1.0,CB=.50,TC=.44,PHETE=.003,PHETEP=.002$
+
+NACA-H-4-0012-25
+DIM FT
+DUMP ALL
+DERIV RAD
+PART
+CASEID TOTAL: Fokker F50
