@@ -1,0 +1,16 @@
+﻿# 
+# This file contains the parameter values of the Design Points successfully updated by ANSYS Workbench.
+# Project name: DiscoAttuatore
+# Creation date: 11/25/2019 12:44:35
+# 
+# 11/25/2019 12:44:35
+# The parameters defined in the project are:
+# ,P1 - pressure-op [N]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1
+DP 0,-50.973715
+# 
+# A non parametric change occurred and invalidated design point results.
+# 07/27/2020 18:44:10
+# 

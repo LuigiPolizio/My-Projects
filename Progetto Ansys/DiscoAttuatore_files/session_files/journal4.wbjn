@@ -1,0 +1,20 @@
+fluentLauncherSettings2.SetEntityProperties(Properties=Set(EnvPath={}))
+setup2.Edit()
+system5.Delete()
+system6 = template1.CreateSystem(
+    DataTransferFrom=[Set(FromComponent=meshComponent1, TransferName=None, ToComponentTemplate=componentTemplate1)],
+    Position="Right",
+    RelativeTo=system4)
+setupComponent2 = system6.GetComponent(Name="Setup")
+setupComponent2.Refresh()
+meshComponent1.Update(AllDependencies=True)
+mesh1.Edit()
+system4.Delete()
+system6.Delete()
+system3.Copy(KeepConnections=True)
+system7 = GetSystem(Name="SYS 1")
+mesh2 = system7.GetContainer(ComponentName="Mesh")
+mesh2.Edit()
+Save(Overwrite=True)
+mesh2.Exit()
+Reset()
